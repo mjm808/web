@@ -13,7 +13,7 @@ function Resume() {
             <div className="flex justify-between items-center mb-6">
               <RetroButton to="/" className="mb-6"> [←] Back </RetroButton>
                <a 
-              href="/remume/MalnakResume2026.pdf"
+              href={process.env.PUBLIC_URL + "/remume/MalnakResume2026.pdf"}
               download="Matthew_Malnak_Resume.pdf"
               className="font-ibmvga text-white bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 
                           hover:from-emerald-500/30 hover:to-cyan-500/30 
@@ -30,7 +30,7 @@ function Resume() {
             
             <div className="w-full h-[70vh] bg-white rounded-lg overflow-hidden">
               <iframe 
-                src="/remume/MalnakResume2026.pdf#toolbar=0"
+                src={process.env.PUBLIC_URL + "/remume/MalnakResume2026.pdf#toolbar=0"}
                 className="w-full h-full border-0"
                 title="Resume PDF"
               />
