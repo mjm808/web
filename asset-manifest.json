@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.4ee9ca7e.css",
-    "main.js": "/static/js/main.2a850283.js",
+    "main.js": "/static/js/main.67e2b969.js",
     "static/media/Web437_NEC_APC3_8x16.woff": "/static/media/Web437_NEC_APC3_8x16.038c2d4c4bde42700504.woff",
     "index.html": "/index.html",
     "main.4ee9ca7e.css.map": "/static/css/main.4ee9ca7e.css.map",
-    "main.2a850283.js.map": "/static/js/main.2a850283.js.map"
+    "main.67e2b969.js.map": "/static/js/main.67e2b969.js.map"
   },
   "entrypoints": [
     "static/css/main.4ee9ca7e.css",
-    "static/js/main.2a850283.js"
+    "static/js/main.67e2b969.js"
   ]
 }
