@@ -1,7 +1,7 @@
 import { useMode } from '../context/modecontext';
 
 function ModeToggle() {
-    return null; //remember to remove to bring back mode
+  // return null; //TODO: finish implementing mode toggle
   const {isRetroMode, toggleMode} = useMode();
 
   if (isRetroMode) {
