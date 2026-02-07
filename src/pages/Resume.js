@@ -15,7 +15,7 @@ function Resume() {
                <a 
               href={process.env.PUBLIC_URL + "/remume/MalnakResume2026.pdf"}
               download="Matthew_Malnak_Resume.pdf"
-              className="font-ibmvga text-white bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 
+              className="font-nec text-white bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 
                           hover:from-emerald-500/30 hover:to-cyan-500/30 
                           border-2 border-emerald-400/50 hover:border-emerald-400/80
                           px-4 py-3 transition-all duration-200
