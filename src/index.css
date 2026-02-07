@@ -50,7 +50,7 @@ body.transitioning {
     background-position: 0% 50%;
   }
 }
-*/
+
 body::after {
   content: '';
   position: fixed;
