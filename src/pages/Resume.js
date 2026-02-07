@@ -21,7 +21,7 @@ function Resume() {
                           px-4 py-3 transition-all duration-200
                           shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]
                           inline-block"
-            >
+                >
               Download [↓]
             </a>
             </div>

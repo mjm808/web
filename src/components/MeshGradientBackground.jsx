@@ -97,19 +97,19 @@ const MeshGradientBackground = () => {
         tuv.x += sin(tuv.y * frequency + speed) / amplitude;
         tuv.y += sin(tuv.x * frequency * 1.5 + speed) / (amplitude * 0.5);
            
-        // Dark gradient colors - subtle variations of your original dark theme
-        vec3 darkestTeal = vec3(7, 8, 21) / vec3(255.0);         // #070815 - Very dark
-        vec3 darkNavy = vec3(18, 20, 31) / vec3(255.0);          // #12141f - Dark navy
-        vec3 darkTealGreen = vec3(26, 58, 53) / vec3(255.0);     // #1a3a35 - Dark teal green
-        vec3 midDarkBlue = vec3(29, 35, 51) / vec3(255.0);       // #1d2333 - Your original bg
+        // Dark gradient colors
+        vec3 darkestTeal = vec3(7, 8, 21) / vec3(255.0);         
+        vec3 darkNavy = vec3(18, 20, 31) / vec3(255.0);          
+        vec3 darkTealGreen = vec3(26, 58, 53) / vec3(255.0);     
+        vec3 midDarkBlue = vec3(29, 35, 51) / vec3(255.0);       
         
-        // Slightly lighter dark colors for variation
-        vec3 mediumDarkTeal = vec3(40, 48, 62) / vec3(255.0);    // #28303e - Medium dark
-        vec3 tealAccent = vec3(22, 56, 48) / vec3(255.0);        // #163830 - Teal accent
-        vec3 slateBlue = vec3(50, 61, 74) / vec3(255.0);         // #323d4a - Slate blue
-        vec3 deepTeal = vec3(30, 50, 55) / vec3(255.0);          // Deep teal
+        // Slightly lighter
+        vec3 mediumDarkTeal = vec3(40, 48, 62) / vec3(255.0);  
+        vec3 tealAccent = vec3(22, 56, 48) / vec3(255.0);      
+        vec3 slateBlue = vec3(50, 61, 74) / vec3(255.0);       
+        vec3 deepTeal = vec3(30, 50, 55) / vec3(255.0);        
         
-        // Very subtle cycling between dark variations (stays dark)
+        // Very subtle cycling between variations
         float cycle = sin(uTime * 0.3);
         float t = (sign(cycle) * pow(abs(cycle), 0.8) + 1.0) / 2.0;
         vec3 color1 = mix(darkestTeal, mediumDarkTeal, t * 0.5);
@@ -228,5 +228,12 @@ const MeshGradientBackground = () => {
     />
   );
 };
-
+function animate() {
+  if (document.hidden) {
+    requestAnimationFrame(animate);
+    return;
+  }
+  // ... rest of animation
+}
+document.addEventListener('visibilitychange', () => {});
 export default MeshGradientBackground;

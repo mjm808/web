@@ -33,29 +33,6 @@ body.transitioning {
   overflow: hidden;
 }
 
-/* body::before {
-  content: '';
-  position: fixed;
-  top: -10vh;
-  left: -10vw;
-  right: -10vw;
-  bottom: -10vh;
-  background: 
- linear-gradient(
-      135deg,
-    #070815 0%,
-    #12141f 15%,
-    #1a3a35 30%,
-    #1d2333 50%,
-    #28303e 65%,
-    #163830 80%,
-    #323d4a 100%
-    );
-  background-size: 400% 400%;
-  animation: gradientShift 25s ease-in-out infinite;
-  z-index: -2;
-}
-
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -86,14 +63,3 @@ body::after {
   pointer-events: none;
   opacity: .05;
 }
-/*
-.card {
-  background: 
-    radial-gradient(at 20% 30%, hsla(195, 70%, 40%, 0.8) 0px, transparent 50%),
-    radial-gradient(at 80% 20%, hsla(210, 60%, 50%, 0.6) 0px, transparent 50%),
-    radial-gradient(at 50% 80%, hsla(200, 80%, 30%, 0.7) 0px, transparent 50%),
-    radial-gradient(at 90% 70%, hsla(185, 65%, 45%, 0.5) 0px, transparent 50%),
-    hsla(200, 50%, 35%, 1);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-} */
