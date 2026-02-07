@@ -37,7 +37,7 @@ function AboutMe() {
   if (isRetroMode) {
     return (
       <PageTransition>
-        <div className="flex items-center justify-center min-h-screen px-4 py-8 overflow-y-auto gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 py-8 overflow-y-auto gap-6">
 
           {/* ===== MAIN BUBBLE ===== */}
           <div className={bubbleClasses}>
