@@ -26,7 +26,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ModeProvider>
-      <BrowserRouter basename="/web">
+      <BrowserRouter>
       <MeshGradientBackground />
         <div className="overflow-x-hidden min-h-screen">
          
