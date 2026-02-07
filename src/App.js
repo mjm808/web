@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ModeProvider } from './context/modecontext';
 import { AnimatePresence } from 'framer-motion';
 import MeshGradientBackground from './components/MeshGradientBackground';
-import ModeToggle from './components/modetoggle';
+
 import Layout from './components/layout';
 
 import LandingPage from './pages/LandingPage';
@@ -26,10 +26,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ModeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/web">
       <MeshGradientBackground />
         <div className="overflow-x-hidden min-h-screen">
-          <ModeToggle />
+         
           <Layout>
             <AnimatedRoutes />
           </Layout>
