@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'NEC_APC3_8x16';
+  src: url('./assets/fonts/Web437_NEC_APC3_8x16.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-nec {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+body {
+  background: #1d2333;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+
+/* Hide scrollbar during transitions */
+body.transitioning {
+  overflow: hidden;
+}
+
+/* body::before {
+  content: '';
+  position: fixed;
+  top: -10vh;
+  left: -10vw;
+  right: -10vw;
+  bottom: -10vh;
+  background: 
+ linear-gradient(
+      135deg,
+    #070815 0%,
+    #12141f 15%,
+    #1a3a35 30%,
+    #1d2333 50%,
+    #28303e 65%,
+    #163830 80%,
+    #323d4a 100%
+    );
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease-in-out infinite;
+  z-index: -2;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='50' numOctaves='2' seed='0'%3E%3Canimate attributeName='seed' from='0' to='100' dur='1s' repeatCount='indefinite'/%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: -1;
+  pointer-events: none;
+  opacity: .05;
+}
+/*
+.card {
+  background: 
+    radial-gradient(at 20% 30%, hsla(195, 70%, 40%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 80% 20%, hsla(210, 60%, 50%, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, hsla(200, 80%, 30%, 0.7) 0px, transparent 50%),
+    radial-gradient(at 90% 70%, hsla(185, 65%, 45%, 0.5) 0px, transparent 50%),
+    hsla(200, 50%, 35%, 1);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+} */
