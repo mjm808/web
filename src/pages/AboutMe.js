@@ -8,7 +8,7 @@ function AboutMe() {
   const { isRetroMode } = useMode();
   //  variable to track the paanel and whats open
   const [activePanel, setActivePanel] = useState(null);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(true);
   // styles and stuff
   let bubbleClasses = "bg-white/10 backdrop-blur-md p-6 md:p-12 rounded-2xl shadow-2xl border border-white/20 max-w-2xl w-full transition-all duration-500";
   const buttonClasses = "bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20 text-white font-nec hover:bg-white/20 transition-all";
@@ -45,25 +45,41 @@ function AboutMe() {
 
             {/* typewriter text */}
             <div className="text-white font-ibmvga text-lg leading-relaxed break-words">
-              <Typewriter options={{delay: 7}}
+              <div className="text-white font-ibmvga text-lg leading-relaxed break-words">
+              <div className="text-center font-bold text-2xl mb-4 mt-4">About Me</div>
+              <strong>Current Role:</strong> IT Support Engineer at Insmed Incorporated<br/><br/>
+              <strong>Education:</strong> Rutgers University Graduate (Cum Laude, Dean's List)<br/>
+              Double Major in Information Technology & Informatics and Criminal Justice<br/><br/>
+              <strong>Who am I (professionally):</strong><br/>
+              IT Support Engineer with hands-on experience in identity and access management, ServiceNow administration, and endpoint security tooling. Skilled in Active Directory, Okta, Intune, and PowerShell automation with a track record of streamlining IT operations. Pursuing growth in IAM engineering, ServiceNow development, or security operations<br/><br/>
+              <div className="text-center font-bold text-2xl mb-4 mt-6">What I Work With</div>
+              <strong>Platforms:</strong> ServiceNow, Active Directory, Okta, Jamf, Intune, Carbon Black, AirWatch, Office 365, DocuSign Admin, DocuSign Part 11<br/><br/>
+              <strong>Systems:</strong> Windows, macOS, Linux (Fedora, Arch, Mint)<br/><br/>
+              <strong>Languages:</strong> PowerShell, Python, JavaScript, HTML<br/><br/>
+              <strong>Familiar with:</strong> SQL, R, Java<br/><br/>
+              <strong>Certifications:</strong> TestOut Security Pro (November 2024)
+              
+            </div>
+              {/* <Typewriter options={{delay: 7}}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('<div class="text-center font-bold text-2xl mb-4 mt-4">About Me</div>')
-                    .typeString('<strong>Current Role:</strong> IT Support Engineer at Insmed Incorporated<br/><br/>')
-                    .typeString('<strong>Education:</strong> Rutgers University Graduate (Cum Laude, Dean\'s List)<br/>')
-                    .typeString('Double Major in Information Technology & Informatics and Criminal Justice<br/><br/>')
-                    .typeString('<strong>Who am I (professionally):</strong><br/>IT Support Engineer with hands-on experience in identity and access management, ServiceNow administration, and endpoint security tooling. Skilled in Active Directory, Okta, Intune, and PowerShell automation with a track record of streamlining IT operations. Pursuing growth in IAM engineering, ServiceNow development, or security operations<br/><br/>')
-                    .pauseFor(200)
-                    .typeString('<div class="text-center font-bold text-2xl mb-4 mt-6">What I Work With</div>')
-                    .typeString('<strong>Platforms:</strong> ServiceNow, Active Directory, Okta, Jamf, Intune, Carbon Black, AirWatch, Office 365, DocuSign Admin, DocuSign Part 11<br/><br/>')
-                    .typeString('<strong>Systems:</strong> Windows, macOS, Linux (Fedora, Arch, Mint)<br/><br/>')
-                    .typeString('<strong>Languages:</strong> PowerShell, Python, JavaScript, HTML<br/><br/>')
-                    .typeString('<strong>Familiar with:</strong> SQL, R, Java<br/><br/>')
-                    .typeString('<strong>Certifications:</strong> TestOut Security Pro (November 2024)')
-                    .callFunction(() => setDone(true))
+                    .typeString(`
+                                <div class="text-center font-bold text-2xl mb-4 mt-4">About Me</div>
+                                <strong>Current Role:</strong> IT Support Engineer at Insmed Incorporated<br/><br/>
+                                <strong>Education:</strong> Rutgers University Graduate (Cum Laude, Dean's List)<br/>
+                                Double Major in Information Technology & Informatics and Criminal Justice<br/><br/>
+                                <strong>Who am I (professionally):</strong><br/>
+                                IT Support Engineer with hands-on experience in identity and access management, ServiceNow administration, and endpoint security tooling. Skilled in Active Directory, Okta, Intune, and PowerShell automation with a track record of streamlining IT operations. Pursuing growth in IAM engineering, ServiceNow development, or security operations<br/><br/>
+                                <div class="text-center font-bold text-2xl mb-4 mt-6">What I Work With</div>
+                                <strong>Platforms:</strong> ServiceNow, Active Directory, Okta, Jamf, Intune, Carbon Black, AirWatch, Office 365, DocuSign Admin, DocuSign Part 11<br/><br/>
+                                <strong>Systems:</strong> Windows, macOS, Linux (Fedora, Arch, Mint)<br/><br/>
+                                <strong>Languages:</strong> PowerShell, Python, JavaScript, HTML<br/><br/>
+                                <strong>Familiar with:</strong> SQL, R, Java<br/><br/>
+                                <strong>Certifications:</strong> TestOut Security Pro (November 2024)
+                              `)
                     .start();
                 }}
-              />
+              /> */}
             </div>
             
             {/* buttons - show after typing finishes */}
@@ -109,7 +125,7 @@ function AboutMe() {
                   <Typewriter options={{delay: 7}}
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString('I love the outdoors! I used to be a Trip Leader and Camp Counselor at Frost Valley. Sometimes I can feel the outdoors calling me from the desk.')
+                        .typeString('I love the outdoors! I used to be a Trip Leader and Camp Counselor at Frost Valley. Sometimes I can feel the mountains calling me.')
                         .start();
                     }}
                     />
