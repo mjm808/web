@@ -75,7 +75,7 @@ const MeshGradientBackground = () => {
       float filmGrainNoise(in vec2 uv) {
         return length(hash(vec2(uv.x, uv.y)));
       }
-      
+
       void main() {
         vec2 uv = gl_FragCoord.xy / uResolution.xy;
         float aspectRatio = uResolution.x / uResolution.y;
@@ -122,7 +122,7 @@ const MeshGradientBackground = () => {
         vec3 layer2 = mix(color4, color1, smoothstep(-0.3, 0.2, (tuv * Rot(radians(-5.0))).x));
         
         vec3 color = mix(layer1, layer2, smoothstep(0.5, -0.3, tuv.y));
-        
+
         // Apply film grain
         color = color - filmGrainNoise(uv) * filmGrainIntensity;
         
@@ -182,8 +182,11 @@ const MeshGradientBackground = () => {
 
     // Handle resize
     function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      // Cap at 2x so very high-DPI phones (3x/4x) don't shade far more pixels
+      // than the eye can tell apart on a soft gradient like this.
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(uResolutionLocation, canvas.width, canvas.height);
     }
@@ -193,13 +196,14 @@ const MeshGradientBackground = () => {
 
     // Animation loop
     let startTime = Date.now();
+    let animationFrameId;
     function animate() {
-      const currentTime = (Date.now() - startTime) * 0.001; // Convert to seconds
-      
-      gl.uniform1f(uTimeLocation, currentTime);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      
-      requestAnimationFrame(animate);
+      if (!document.hidden) {
+        const currentTime = (Date.now() - startTime) * 0.001; // Convert to seconds
+        gl.uniform1f(uTimeLocation, currentTime);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      }
+      animationFrameId = requestAnimationFrame(animate);
     }
 
     animate();
@@ -207,6 +211,7 @@ const MeshGradientBackground = () => {
     // Cleanup
     return () => {
       window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationFrameId);
       gl.deleteProgram(program);
       gl.deleteShader(vertexShader);
       gl.deleteShader(fragmentShader);
@@ -228,12 +233,5 @@ const MeshGradientBackground = () => {
     />
   );
 };
-function animate() {
-  if (document.hidden) {
-    requestAnimationFrame(animate);
-    return;
-  }
-  // ... rest of animation
-}
-document.addEventListener('visibilitychange', () => {});
+
 export default MeshGradientBackground;
