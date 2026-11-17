@@ -48,16 +48,15 @@ function AboutMe() {
               <div className="text-white font-ibmvga text-lg leading-relaxed break-words">
               <div className="text-center font-bold text-2xl mb-4 mt-4">About Me</div>
               <strong>Current Role:</strong> IT Support Engineer at Insmed Incorporated<br/><br/>
-              <strong>Education:</strong> Rutgers University Graduate (Cum Laude, Dean's List)<br/>
-              Double Major in Information Technology & Informatics and Criminal Justice<br/><br/>
+              <strong>Education:</strong> Rutgers University, Dual B.A. in Information Technology and Criminal Justice, Cum Laude, GPA 3.5/4.0<br/><br/>
               <strong>Who am I (professionally):</strong><br/>
-              IT Support Engineer with hands-on experience in identity and access management, ServiceNow administration, and endpoint security tooling. Skilled in Active Directory, Okta, Intune, and PowerShell automation with a track record of streamlining IT operations. Pursuing growth in IAM engineering, ServiceNow development, or security operations<br/><br/>
+              IT Support Engineer in a GxP-validated pharmaceutical environment, working across ServiceNow administration/development and integrations. Currently SME for the company's Moveworks AI agent, owning its integration layer across ServiceNow, Microsoft Teams, MS Graph, Active Directory, Entra ID, and DocuSign.<br/><br/>
               <div className="text-center font-bold text-2xl mb-4 mt-6">What I Work With</div>
-              <strong>Platforms:</strong> ServiceNow, Active Directory, Okta, Jamf, Intune, Carbon Black, AirWatch, Office 365, DocuSign Admin, DocuSign Part 11<br/><br/>
-              <strong>Systems:</strong> Windows, macOS, Linux (Fedora, Arch, Mint)<br/><br/>
-              <strong>Languages:</strong> PowerShell, Python, JavaScript, HTML<br/><br/>
-              <strong>Familiar with:</strong> SQL, R, Java<br/><br/>
-              <strong>Certifications:</strong> TestOut Security Pro (November 2024)
+              <strong>Platforms:</strong> ServiceNow, Moveworks Agent Studio, Active Directory, Entra ID, Okta, Jamf, Intune, Carbon Black, Workspace ONE/AirWatch, Office 365, DocuSign, AlertMedia, Tanium<br/><br/>
+              <strong>Systems:</strong> Windows, macOS, Linux<br/><br/>
+              <strong>Languages:</strong> PowerShell, Python, Docker<br/><br/>
+              <strong>Familiar with:</strong> JavaScript, SQL, HTML/CSS, React<br/><br/>
+              <strong>Certifications:</strong> TestOut Security Pro (2024), ServiceNow Certified System Administrator (2026)
               
             </div>
               {/* <Typewriter options={{delay: 7}}
